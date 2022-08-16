@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"favoritos.css"}
+{"version":3,"sourceRoot":"","sources":["favoritos.scss"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;EACA;;AAEA;EACI;;AAGJ;EACI;;AAGJ;EACI;;AAEA;EACI;EACA;EACA;EACA;EACA;;AAKR;EACI;EACA;EACA;;AAEA;EACI;EACA;EACA","file":"favoritos.css"}
