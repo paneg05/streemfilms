@@ -14,6 +14,15 @@ function Favoritos(){
         setLoad(false)
     },[])
 
+    function excluir(id){
+        let filtroFilmes = filmes.filter((item)=>{
+            return(item.id!== id)
+        })
+
+        setFilms(filtroFilmes)
+        localStorage.setItem('@streemfilms',JSON.stringify(filtroFilmes))
+    }
+
     if(load){
         return(
             <div>
@@ -25,7 +34,7 @@ function Favoritos(){
     return(
         <div className='meus-filmes'>
             <h1>Meus filmes</h1>
-
+            {filmes.length === 0 && <span>você não tem nem um filme salvo !!</span>}
             <ul>
                 {filmes.map((el,i)=>{
                     return(
@@ -33,7 +42,7 @@ function Favoritos(){
                             <span>{el.title}</span>
                             <div>
                                <Link to={`/filme/${el.id}`}>Ver detalhes</Link>
-                               <button className='excluir' >Excluir</button>
+                               <button onClick={()=>excluir(el.id)} className='excluir' >Excluir</button>
                             </div>
                         </li>
                     )
